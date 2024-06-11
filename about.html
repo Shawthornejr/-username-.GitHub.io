@@ -52,15 +52,41 @@
 
     <script>
         const user = {
-            name: '',
-            imageUrl: '',
-            bio: ''
+            name: 'samuel',
+            imageUrl: 'images/aboutmesize.png',
+            bio: 'Hello world! My name is samuel Hawthorne and Im studying to be a web dev! I like going for walks and trying to solve problems plus I like being with my kids and the dog and cat. Learning new computer languages is so interesting and engaging!'
         };
 
+        function UserProfile({user}) {
+            return (
+                    <div>
+                        <h1>{user.name}</h1>
+                        <img src={user.imageUrl} />
+                        <p>{user.bio}</p>
+                </div>
+);
+    }
+
         // Step one - Create a React element
+        const h1Elem = document.createElement('h1');
+        h1Elem.textContent = user.name;
+
+        const imgElem = document.createElement('img');
+        imgElem.src = user.imageUrl;
+        imgElem.alt = `${user.name}'s profile`;
+
+        const pElem = document.createElement('p');
+        pElem.textContent = user.bio;
+
+
 
         // Step 2: Render the React element
 
+        document.getlElementById('h1').appendChild(h1Elem);
+        document.getlElementById('img').appendChild(imgElem);
+        document.getlElementById('content').appendChild(pElem);
+
+        ReactDOM.render(<UserProfile user={user} />, document.getElementsById('root'));
     </script>
 
 </main><!-- /.container -->
