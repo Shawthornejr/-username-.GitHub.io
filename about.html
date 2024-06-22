@@ -3,68 +3,73 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Hawthorne, Samuel About Page: 225</title>
+    <meta name="description" content="About Samuel Hawthorne, a self-taught web developer specializing in creating functional and aesthetically pleasing websites.">
+    <meta name="author" content="Samuel Hawthorne">
+    <meta name="keywords" content="Samuel Hawthorne, web developer, freelance, WordPress, Houston, Texas, web development, coding, HTML, CSS, JavaScript">
+    <title>About Samuel Hawthorne: Web Developer</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
     <!-- Bootstrap core CSS -->
     <link href="css/styles.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Samuel Hawthorne</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="grid.html">Grid</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="components.html">Carousel</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Samuel Hawthorne</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="grid.html">Grid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="components.html">Carousel</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
 <main role="main" class="container-fluid">
-    <div class="about-me-container">
+    <section class="about-me-container">
         <h2>About Me</h2>
         <p>I'm a self-taught web developer. I started learning web development in college and it expanded from there. I've done freelance work in Houston, Texas and worked with WordPress to build small client websites.</p>
         <p>Over the years, I've honed my skills in various aspects of web development, constantly staying updated with the latest technologies and trends. My passion for coding drives me to create functional and aesthetically pleasing websites for my clients.</p>
-    </div>
+    </section>
     <div id="root"></div>
-    <div class="footer">
-            &copy; 2024 Samuel Hawthorne, Web Developer
-        </div>
 
-    <script>
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
         const user = {
-            name: 'samuel',
-            imageUrl: 'images/aboutmesize.png',
-            bio: 'Hello world! My name is samuel Hawthorne and Im studying to be a web dev! I like going for walks and trying to solve problems plus I like being with my kids and the dog and cat. Learning new computer languages is so interesting and engaging!'
+            name: 'Samuel',
+            imageUrl: 'images',
+            bio: 'Hello world! My name is Samuel Hawthorne and I\'m studying to be a web developer! I like going for walks and trying to solve problems plus I like being with my kids and the dog and cat. Learning new computer languages is so interesting and engaging!'
         };
 
         function UserProfile({ user }) {
             return (
                 <div>
                     <h1>{user.name}</h1>
-                    <img src={user.imageUrl} alt={`${user.name}'s profile`} />
+                    <img src={user.imageUrl} alt={`${user.name}'s profile`} className="profile-img" />
                     <p>{user.bio}</p>
                 </div>
             );
@@ -73,5 +78,11 @@
         ReactDOM.render(<UserProfile user={user} />, document.getElementById('root'));
     </script>
 </main><!-- /.container -->
+
+<footer>
+    <div class="footer">
+        &copy; 2024 Samuel Hawthorne, Web Developer
+    </div>
+</footer>
 </body>
 </html>
